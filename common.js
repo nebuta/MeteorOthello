@@ -10,6 +10,7 @@ function resetBoard(){
 			Cells.update({board_id:'b1',x:4,y:3},{$set: {piece: 'w'}});
 			Cells.update({board_id:'b1',x:3,y:4},{$set: {piece: 'w'}});
 			Cells.update({board_id:'b1',x:4,y:4},{$set: {piece: 'b'}});
+			Boards.update({},{$set: {ready:false,black:false,white:false}});
 			if(stopHandle)
 				stopHandle.stop();
 			stopHandle = Boards.find({black: true, white: true}).observe({
