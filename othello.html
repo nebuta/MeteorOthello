@@ -1,0 +1,42 @@
+<head>
+	<title>Othello</title>
+</head>
+
+<body>
+	{{> board}}
+	{{> tools}}
+</body>
+
+<template name="board">
+<div id="board">
+	{{#each cells}}
+	{{> cell_item}}
+	{{/each}}
+</div>
+</template>
+
+<template name='cell_item'>
+<div class='cell {{piece}}' style='{{style}}'>
+<span class="piece">&nbsp;</span>
+</div>
+</template>
+
+<template name='tools'>
+<div id='tools'>
+	<div id='turninfo'></div>
+	<span>
+		{{#if black}}
+			You are BLACK
+		{{/if}}
+		{{#if white}}
+		You are WHITE
+		{{/if}}
+	</span><br/>
+	<span id='turninfo'>
+	</span><br/>
+	<input id='reset' type='button' value='Reset'/>
+	<input id='joinblack' type='button' value='Join black' {{black_disabled}}/>
+	<input id='joinwhite' type='button' value='Join white' {{white_disabled}}/>
+</div>
+</template>
+

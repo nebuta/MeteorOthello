@@ -1,0 +1,56 @@
+#board {
+//	width: 330px;
+//	height: 330px;
+	background-color: green;
+	cursor: pointer;
+}
+
+.cell{
+	font-size: 50px;
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	margin: 3px;
+	border: solid 1px black;
+}
+
+.black {
+	color: black;
+}
+
+.white {
+	color: white;
+}
+
+.none {
+	color: white;
+	background-color: green;
+}
+
+span.piece {
+	position: absolute;
+	left: 2px;
+	width: 28px;
+	height: 28px;
+	border: solid 1px black;
+	border-radius: 13px;
+}
+
+.black span.piece{
+	background-color: black;
+}
+
+.white span.piece{
+	background-color: white;
+}
+
+.none span.piece{
+	background-color: transparent;
+	border: none;
+}
+
+div#tools{
+	position: absolute;
+	top: 360px;
+}
+
